@@ -1,0 +1,15 @@
+$light-cyan: hsl(193, 38%, 86%);
+$neon-green: hsl(150, 100%, 66%);
+$grayishblue: hsl(217, 19%, 38%);
+$dark-grayish-blue: hsl(217, 19%, 24%);
+$dark-blue: hsl(218, 23%, 16%);
+
+// font size
+ $step--2: clamp(0.78rem, calc(0.70rem + 0.40vw), 1.20rem);
+ $step--1: clamp(0.94rem, calc(0.83rem + 0.54vw), 1.50rem);
+ $step-0: clamp(1.13rem, calc(0.98rem + 0.71vw), 1.88rem);
+ $step-1: clamp(1.35rem, calc(1.16rem + 0.95vw), 2.34rem);
+ $step-2: clamp(1.62rem, calc(1.37rem + 1.25vw), 2.93rem);
+ $step-3: clamp(1.94rem, calc(1.62rem + 1.64vw), 3.66rem);
+ $step-4: clamp(2.33rem, calc(1.90rem + 2.14vw), 4.58rem);
+ $step-5: clamp(2.80rem, calc(2.24rem + 2.78vw), 5.72rem);

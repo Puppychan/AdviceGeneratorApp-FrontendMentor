@@ -1,0 +1,95 @@
+@use "variables.scss" as var;
+@use "mixins.scss" as mi;
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html {
+    font-family: 'Manrope', sans-serif;
+}
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+body {
+
+
+    background-color: var.$dark-blue;
+    @include mi.flex-col-center(3em);
+    padding: 2em;
+    height: 100vh;
+    .card {
+        // width: 90%;
+        @include mi.flex-col-center(1em);
+        max-width: 424px;
+
+        background-color: var.$dark-grayish-blue;
+        text-align: center;
+        padding: 3.5em 1em;
+        border-radius: 20px;
+        position: relative;
+        &-id {
+            color: var.$neon-green;
+            font-size: var.$step--1;
+        }
+        &-text {
+            color: var.$light-cyan;
+            font-size: var.$step-0;
+            height: 10em;
+            overflow-y: auto;
+            text-align: center;
+        }
+        &-divider {
+            background: url("../images/pattern-divider-mobile.svg") center / cover no-repeat;
+            width: 100%;
+            height: 1em;
+        }
+        &-roll {
+            @include mi.flex-col-center;
+            position: absolute;
+            bottom: -1.7em;
+            border: none;
+
+            background-color: var.$neon-green;
+
+            width: 4em;
+            height: 4em;
+            border-radius: 50%;
+            & img {
+                width: 2.5em;
+            }
+        }
+    }
+    .attribution {
+        font-size: var.$step--2;
+    }
+}
+@media screen and (min-width: 768px){
+    body {
+        .card {
+            width: 70%;
+            max-width: 600px;
+        }
+    }
+}
+@media screen and (min-width: 1440px){
+    body {
+        .card {
+            width: 40%;
+            gap: 2em;
+            padding: 5em 1.7em;
+            max-width: 700px;
+            &-divider {
+                background-image: url("../images/pattern-divider-desktop.svg");
+            }
+            &-roll {
+                width: 3vw;
+                height: 3vw;
+                & img {
+                    width: 60%;
+                }
+            }
+        }
+    }
+}
